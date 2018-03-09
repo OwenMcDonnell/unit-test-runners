@@ -4,13 +4,7 @@ init:
 image: Visual Studio 2017
 platform:
   - Any CPU
-test:
-  assemblies:
-    except:
-    - MsTestUnitTestProject.dll
-    - NUnit3TestProject.dll
-    - NUnitTestProject.dll
-    - XUnit20TestProject.dll
+test_script: run-test.ps1
 install:
 - nuget
 - cmd: nuget restore
