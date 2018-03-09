@@ -6,8 +6,9 @@ platform:
   - Any CPU
   - x86
 test_script: 
-  - ps: dotnet test "C:\projects\unit-test-runners\DotNetCore-xUnit\DotNetCore-xUnit.csproj" --no-build 
   - cmd: dir "C:\projects\unit-test-runners\DotNetCore-xUnit\bin\"
+  - ps: dotnet test "C:\projects\unit-test-runners\DotNetCore-xUnit\DotNetCore-xUnit.csproj" --no-build 
+  
 install:
 - nuget
 - cmd: nuget restore
