@@ -2,6 +2,15 @@ version: 1.0.{build}
 init:
 - ps: if (!(test-path "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community")) {Write-host ".NET Core tests require VS 2017"; Exit-AppveyorBuild}
 image: Visual Studio 2017
+platform:
+  - Any CPU
+test:
+  assemblies:
+    except:
+    - MsTestUnitTestProject.dll
+    - NUnit3TestProject.dll
+    - NUnitTestProject.dll
+    - XUnit20TestProject.dll
 install:
 - nuget
 - cmd: nuget restore
