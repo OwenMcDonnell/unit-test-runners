@@ -4,7 +4,7 @@ init:
 image: Visual Studio 2017
 platform:
   - Any CPU
-test_script: run-test.ps1
+test_script: run-tests.ps1
 install:
 - nuget
 - cmd: nuget restore
