@@ -3,9 +3,9 @@ init:
 - ps: if (!(test-path "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community")) {Write-host ".NET Core tests require VS 2017"; Exit-AppveyorBuild}
 image: Visual Studio 2017
 platform:
-  - AnyCPU
+  - Any CPU
 test_script: 
-  - cmd: dir "C:\projects\unit-test-runners\DotNetCore-xUnit\bin\"
+  - cmd: set PLATFORM=AnyCPU
   - ps: dotnet test "C:\projects\unit-test-runners\DotNetCore-xUnit\DotNetCore-xUnit.csproj" --no-build 
   
 install:
