@@ -4,7 +4,8 @@ init:
 image: Visual Studio 2017
 platform:
   - Any CPU
-test_script: run-tests.ps1
+test_script: 
+  - ps: dotnet test "C:\projects\unit-test-runners\unit-test-runners/DotNetCore-xUnit.csproj" --configuration $env:platform --no-build -o "DotNetCore-xUnit.tests/bin/Any CPU/Debug/netcoreapp2.0/"
 install:
 - nuget
 - cmd: nuget restore
