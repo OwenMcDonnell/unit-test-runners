@@ -4,9 +4,9 @@ init:
 image: Visual Studio 2017
 platform:
   - Any CPU
-test_script: 
-  - cmd: set PLATFORM=AnyCPU
-  - ps: dotnet test "C:\projects\unit-test-runners\DotNetCore-xUnit\DotNetCore-xUnit.csproj" --no-build 
+#test_script: 
+ # - cmd: set PLATFORM=AnyCPU
+  #- ps: dotnet test "C:\projects\unit-test-runners\DotNetCore-xUnit\DotNetCore-xUnit.csproj" --no-build 
   
 install:
 - nuget
