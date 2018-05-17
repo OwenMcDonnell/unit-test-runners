@@ -1,5 +1,6 @@
 version: 1.0.{build}
 init:
+- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 - ps: if (!(test-path "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community")) {Write-host ".NET Core tests require VS 2017"; Exit-AppveyorBuild}
 image: Visual Studio 2017
 platform:
